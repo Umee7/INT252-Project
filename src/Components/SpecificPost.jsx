@@ -36,7 +36,7 @@ const SpecificPost = observer(({addNote}) => {
             reference_id_param: params.referenceId
         })
         if(error){
-            addNote("Could not retrieve the post, refresh the page and tryagain!", "error")
+            addNote("Could not retrieve the report, refresh the page and try again!", "error")
         } else {
             SpecificPostState.setLoaded()
             if(data.length > 0){
@@ -44,7 +44,7 @@ const SpecificPost = observer(({addNote}) => {
                 SpecificPostState.setFound()
                 document.title = SpecificPostState.postData.title
             } else {
-                document.title = 'Post not found!'
+                document.title = 'Report not found!'
             }
         }
     }
@@ -64,7 +64,7 @@ const SpecificPost = observer(({addNote}) => {
         :
         <div className="text-center">
             <h2 className="text-2xl my-5">Not Found</h2>
-            <p>Post does not exists, if you've entered the URL manually then check and tryagain!</p>
+            <p>Report does not exists, if you've entered the URL manually then check and tryagain!</p>
         </div>
         :
         <div className="my-5 flex items-center justify-center">

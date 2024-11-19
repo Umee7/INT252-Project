@@ -229,7 +229,7 @@ const NewPost = observer(({ addNote }) => {
 
                 <InputBox
                     inputType={'text'}
-                    labelName={'Your name (optional)'}
+                    labelName={'City or Nearest Landmark (optional)'}
                     maxLength={32} minLength={4}
                     required={false}
                     stateVariable={NewPostState.postData.postedBy} updateData={NewPostState.setPostedBy}
