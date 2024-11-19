@@ -4,28 +4,28 @@ import Question from "./Question";
 const questionsData =[
     {
         'id': '1',
-        'q': 'How can I report a threat or unsafe situation on the platform?',
-        'a': ['To report a threat, simply go to the "Create Post" section, select your country and category, and describe the situation. You can also attach any relevant files like images or videos to help authorities better understand the issue.']
+        'q': 'How can I report a safety concern or threat on this platform?',
+        'a': ['To report a concern, go to the "New Report" section. Select your country and category, describe the issue, and optionally include your city or nearest landmark to help authorities guide you better. You can also attach files like images or videos to provide additional context.']
     },
     {
         'id': '2',
-        'q': 'Will my identity remain anonymous when I report a threat?',
-        'a': ['Yes, your identity will remain anonymous. No personal data such as your name, contact number, or address will be visible to others. Only the country and category of the threat will be visible to the public.']
+        'q': 'Will my identity remain private when I submit a report?',
+        'a': ['Yes, your identity remains completely private. Your name is optional, and no personal data like contact numbers or addresses are required. Only the reports content, country, and category will be visible to others and the authorities.']
     },
     {
         'id': '3',
-        'q': 'Can I modify or delete my report after submission?',
-        'a' : ['No, once a report is posted, it cannot be modified or deleted. This ensures the integrity of the data and helps authorities track all reports accurately.']
+        'q': 'How can I receive support after submitting a report?',
+        'a' : ['Authorities can respond directly under your report by providing a case ID, instructions, and the address of the nearest police station or relevant location. Follow their guidance to get help without needing to explain your case repeatedly.']
     },
     {
         'id': '4',
-        'q': 'How do I contact the support team for help?',
-        'a': ['If you need assistance or have questions about using the platform, you can contact our support team by emailing us at support@saferwomen.com or call the helpline at 1800-XXXX-XXXX. Our team is available 24/7.']
+        'q': 'Can I edit or delete my report after submitting it?',
+        'a': ['No, reports cannot be edited or deleted once submitted. This ensures that all reports remain consistent and helps authorities track the data accurately.']
     },
     {
         'id': '5',
-        'q': 'What if I need immediate help? How can I contact the authorities?',
-        'a': ['In case of an emergency, always call the following helplines in India:\n- National Women’s Helpline: 1091\n- Women’s Safety App (SOS): 112\n- Police Emergency Number: 100\n- Childline (For minors): 1098']
+        'q': 'What should I do in case of an emergency?',
+        'a': ["In case of an emergency, always call the appropriate helplines. In India, use the following: Women's Helpline: 1091, Police Emergency: 100, SOS (Womens Safety App): 112, Childline (For minors): 1098. In other countries, dial the emergency number for assistance, such as 911 (US) or 999 (UK). Stay calm, provide your location clearly, and follow the instructions given."]
     }
 ]
 
