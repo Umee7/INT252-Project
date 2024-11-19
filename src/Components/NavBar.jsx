@@ -10,14 +10,14 @@ const NavBar = () => {
                 return `transition duration-300 flex items-center text-lg rounded-3xl w-max px-5 py-2.5 mt-10 mb-3 max-md:my-0 max-md:mx-auto border-2 ${e.isActive ? "dark:bg-cyan-300 dark:border-cyan-300 dark:text-black border-neutral-600 bg-neutral-800/90 text-white" : "bg-neutral-300/50 dark:bg-neutral-700/50 dark:text-white"}`
             }}>
                 <MdOutlineArticle className="text-2xl mx-1" />
-                <span className="mx-1 max-md:hidden">Posts</span>
+                <span className="mx-1 max-md:hidden">Reports</span>
             </NavLink>
 
             <NavLink to={'/new'} className={e => {
                 return `transition duration-300 flex items-center text-lg rounded-3xl w-max px-5 py-2.5 my-3 max-md:my-0 max-md:mx-auto border-2 ${e.isActive ? "dark:bg-cyan-300 dark:border-cyan-300 dark:text-black border-neutral-600 bg-neutral-800/90 text-white" : "bg-neutral-300/50 dark:bg-neutral-700/50 dark:text-white"}`
             }}>
                 <AiOutlinePlusCircle className="text-2xl mx-1" />
-                <span className="mx-1 max-md:hidden">New post</span>
+                <span className="mx-1 max-md:hidden">New report</span>
             </NavLink>
 
             <NavLink to={'/faqs'} className={e => {

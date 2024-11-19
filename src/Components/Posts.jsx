@@ -66,7 +66,7 @@ const Posts = observer(({ addNote }) => {
             "category_specific": PostsState.watchingCategory,
         })
         if (error) {
-            addNote("Could not retreive posts, tryagain later!", "error")
+            addNote("Could not retreive reports, tryagain later!", "error")
         } else {
             if(data.length === 0){
                 PostsState.setDeadEnd()
@@ -127,7 +127,7 @@ const Posts = observer(({ addNote }) => {
     }, [PostsState.watchingCategory])
 
     useEffect(() => {
-        document.title = "All posts - F4nsix"
+        document.title = "All Reports - Home"
 
         if(PostsState.isLoadFirstTime === true){
             PostsState.setLoading()
@@ -151,7 +151,7 @@ const Posts = observer(({ addNote }) => {
                     PostsState.isError === true ?
                         <div className="flex items-center justify-center flex-col min-h-screen">
                             <BsFillExclamationCircleFill className="block w-12 h-12 mx-auto my-5" />
-                            <p className="text-center">Could not retrieve the posts, check the network connection and tryagain after some time!</p>
+                            <p className="text-center">Could not retrieve the reports, check the network connection and tryagain after some time!</p>
                         </div>
                         :
                         PostsState.posts.length > 0 ?
@@ -166,14 +166,14 @@ const Posts = observer(({ addNote }) => {
                             :
                             <div className="my-5 text-lg font-mono p-10">
                                 <BsFillExclamationCircleFill className="block w-12 h-12 mx-auto my-5" />
-                                <p className="text-center">Sorry, no posts found published by any user, tryagain soon!</p>
+                                <p className="text-center">Sorry, no reports found published by any user, try again soon!</p>
                             </div>
                     :
                     []
             }
             {
                 PostsState.isLoading === true ?
-                <Loading text={"Getting posts..."} /> : []
+                <Loading text={"Getting reports..."} /> : []
             }
         </div>
     )

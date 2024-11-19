@@ -49,13 +49,13 @@ const NewPost = observer(({ addNote }) => {
     const navigate = useNavigate()
 
     useEffect(()=>{
-        document.title = "New Post"
+        document.title = "New Report"
     },[])
 
     const updateFiles = async (files) => {
         return new Promise((resolve, reject) => {
             if (files.length > 5) {
-                return reject("You can post maximum 5 files per post!")
+                return reject("You can post maximum 5 files per report!")
             }
             let filesData = []
             let successItems = []
@@ -145,10 +145,10 @@ const NewPost = observer(({ addNote }) => {
             errors.push("Value for name must be between 4 to 32 characters!")
         }
         if (postData.content.length > 2048) {
-            errors.push("Value for post content must be between 4 to 2048 characters!")
+            errors.push("Value for report content must be between 4 to 2048 characters!")
         }
         if (postData.files.length > 5) {
-            errors.push("You cannot post more than 5 Image/Video files in a post!")
+            errors.push("You cannot post more than 5 Image/Video files in a report!")
         }
         if (!getCategoryByCode(postData.category)) {
             errors.push("Category does not exists in data!")
@@ -199,11 +199,11 @@ const NewPost = observer(({ addNote }) => {
             if(error.code === '42501'){
                 addNote('To protect the platform we limit the user requests on hour basis, you can tryagain later after an hour!', 'error')
             } else {
-                addNote("Your post could not be posted, tryagain soon", "error")
+                addNote("Your report could not be posted, tryagain soon", "error")
             }
         } else {
             if (data.status === "ok") {
-                addNote("Successfully posted your post, check and share.", "success")
+                addNote("Successfully posted your report, check and share.", "success")
                 NewPostState.resetData()
                 navigate(`/p/${referenceId}`)
             } else {
@@ -216,10 +216,10 @@ const NewPost = observer(({ addNote }) => {
     return (
         <div className="p-5">
             <form className="w-full max-w-xl mx-auto my-10 mx-1" onSubmit={sendPost}>
-                <h2 className="text-2xl my-8 text-black dark:text-white">New Post</h2>
+                <h2 className="text-2xl my-8 text-black dark:text-white">New Report</h2>
                 <InputBox
                     inputType={'text'}
-                    labelName={'Post title'}
+                    labelName={'Report title'}
                     maxLength={100} minLength={5}
                     required={true}
                     stateVariable={NewPostState.postData.title} updateData={NewPostState.setPostTitle}
@@ -239,7 +239,7 @@ const NewPost = observer(({ addNote }) => {
 
                 <InputBox
                     multiLine={true}
-                    labelName={'Post content'}
+                    labelName={'Report content'}
                     maxLength={2048} minLength={4}
                     required={true}
                     stateVariable={NewPostState.postData.content} updateData={NewPostState.setPostContent}
@@ -312,7 +312,7 @@ const NewPost = observer(({ addNote }) => {
 
                 <Button
                     disabled={NewPostState.isPosting}
-                    text={<>{NewPostState.isPosting ? <Loading /> : []}Post Anonymously</>}
+                    text={<>{NewPostState.isPosting ? <Loading /> : []}Report Anonymously</>}
                 />
             </form>
         </div>
